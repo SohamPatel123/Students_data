@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Students Database</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<script type="module" src = "./main.js" defer></script>
+<script type="module" src = "./addData.js" defer></script>
+<script type="module" src = "./searchData.js" defer></script>
+<script type="module" src = "./deleteData.js" defer></script>
+
+<body>
+    <h1>Students Database</h1>
+    <div id="modal_overlay">
+        <div id="modal">
+            <form id="addDataForm" action="" method="get">
+                <h1>Add student details</h1>
+                <hr>
+                <div class="formContainer">
+                    <div class="formItems">
+                        <label for="formName">Name:</label>
+                        <input id="formName" name="formName" class="formdetails" type="text" placeholder="Enter Name"/>
+                    </div>
+                    <div class="formItems">
+                        <label for="formAddress">Address:</label>
+                        <input id="formAddress" name="formAddress" class="formdetails" type="text" placeholder="Enter Address"/>
+                    </div>
+                    <div class="formItems">
+                        <label for="formClass">Class:</label>
+                        <input id="formClass" name="formClass" class="formdetails" type="text" placeholder="Enter class"/>
+                    </div>
+                    <div class="formItems">
+                        <label for="formPhoto">Photo:</label>
+                        <input id="formPhoto" name="formPhoto" class="formdetails" type="text" placeholder="Enter relative path of photo"/>
+                    </div>
+                </div>
+                <div id="formFooter">
+                    <input type="submit" class="formButton" value="Submit" id="close-modal"/>
+                    <input type="button" class="formButton" value="Cancel" id="cancelFormButton"/>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="optionsBar">
+        <div id="addItem">
+            <button id="add_modal">Add Student Details</button>
+        </div>
+        <div id="searchBar">
+            <label for="searchInput">
+                <b>Search: </b>
+            </label>
+            <input id="searchInput" name="searchInput" type="search" placeholder="Search by students name"/>
+        </div>
+    </div>
+    <!-- <div id="searchData"></div> -->
+    <div id="studentsDisplayData"></div>
+</body>
+</html>
